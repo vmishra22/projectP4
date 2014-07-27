@@ -7,9 +7,9 @@ label{
     display: inline-block;
     float: left;
     clear: left;
-    width: 250px;
+    width: 125px;
     padding-right: 15px;
-    text-align: right;
+    text-align: left;
 }
 
 input {

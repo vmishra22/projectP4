@@ -4,7 +4,7 @@
 
 	<title>@yield('title','TaskSheet')</title>
 	
-	<link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
+<!-- 	<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}" /> -->
 	<link rel="stylesheet" href="styles/taskStyle.css" type="text/css">
 	
 	@yield('head')

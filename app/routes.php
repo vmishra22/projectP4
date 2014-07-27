@@ -1,5 +1,21 @@
 <?php
 
+
+// Bind route parameters.
+Route::model('task', 'Task');
+
+// Show pages.
+Route::get('/list', array('before' => 'auth', 'uses' => 'TasksController@listTasks'));
+//Route::get('/', 'TasksController@list');
+Route::get('/create', 'TasksController@create');
+Route::get('/edit/{task}', 'TasksController@edit');
+Route::get('/delete/{task}', 'TasksController@delete');
+
+// Handle form submissions.
+Route::post('/create', 'TasksController@handleCreate');
+Route::post('/edit', 'TasksController@handleEdit');
+Route::post('/delete', 'TasksController@handleDelete');
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -195,4 +211,13 @@ Route::get('/debug', function() {
 	
 	echo '</pre>';
 	
+});
+
+Route::get('/truncate', function() {
+
+    # Clear the tables to a blank slate
+    DB::statement('SET FOREIGN_KEY_CHECKS=0'); # Disable FK constraints so that all rows can be deleted, even if there's an associated FK
+    DB::statement('TRUNCATE users');
+    DB::statement('TRUNCATE tasks');
+   
 });
