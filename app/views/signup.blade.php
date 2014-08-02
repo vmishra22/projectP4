@@ -6,6 +6,7 @@
 
 @section('content')
 
+	<a href='/'>Home</a>
 	<h1>Sign up</h1>
 	
 	{{ Form::open(array('url' => '/signup')) }}

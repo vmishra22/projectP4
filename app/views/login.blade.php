@@ -6,7 +6,9 @@
 
 @section('content')
 
-	<h1>Log in</h1>
+	<a href='/'>Home</a>
+
+	<h1>Log in</h1> 
 	
 	{{ Form::open(array('url' => '/login')) }}
 				
@@ -23,7 +25,7 @@
 		{{Form::checkbox('remember_token', '1') }} <br><br>
 		
 		{{ Form::submit('Submit') }}
-	
+
 	{{ Form::close() }}
 	
 @stop

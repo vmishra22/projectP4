@@ -11,6 +11,10 @@
     <form action="{{ action('TasksController@handleEdit') }}" method="post" role="form">
     
         <input type="hidden" name="id" value="{{ $task->id }}">
+
+        <label for="completion_status">Completed?</label>
+        <input type="checkbox" name="completion_status" {{ $task->completion_status ? 'checked' : '' }}/> <br> <br>
+
         <label for="taskname">Task</label>
         <input type="text" name="taskname" value="{{ $task->taskname }}"/> <br> <br>
 

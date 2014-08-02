@@ -1,13 +1,12 @@
 @extends('_master')
 
 @section('title')
-	Create new task
+	Delete task
 @stop
 
 @section('content')
-    
-    <h1>Delete {{ $task->taskname }} <small>Are you sure?</small></h1>
 
+    <h1>Delete "{{ $task->taskname }}"" <small>Are you sure?</small></h1>
 
     <form action="{{ action('TasksController@handleDelete') }}" method="post" role="form">
         <input type="hidden" name="task" value="{{ $task->id }}" />

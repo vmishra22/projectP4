@@ -6,23 +6,16 @@
 
 @section('content')
 
-	<h1>Welcome to To Do Task Master</h1>
+	<h1>Welcome to Task Master</h1>
 	
 	<br><br>
 	
-	<a href='/list'>View all Tasks</a> | 
-	
+	@if(Auth::check())
+		<a href='/list'>View all Tasks</a> | <a href='/IncompleteList'>View Incomplete Tasks</a> | <a href='/CompleteList'>View Completed Tasks</a>
+	@endif
 
 	<br><br>
-	
-	<!-- {{ Form::open(array('url' => '/list', 'method' => 'GET')) }}
 
-		{{ Form::label('query','Search for a book:') }} &nbsp;
-		{{ Form::text('query') }} &nbsp;
-		{{ Form::submit('Search!') }}
-	
-	{{ Form::close() }} -->
-	
 	
 @stop
 

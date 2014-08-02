@@ -1,6 +1,6 @@
 body {
 	padding:20px;
-	background-color:white;
+	background-image:url('/images/55.jpg');
 }
 
 label{
@@ -18,9 +18,11 @@ input {
 }
 
 .logo {
-	width:500px;
+	width:200px;
+	height:200px;
 	margin-bottom:20px;
 	display:block;
+
 }
 
 section {
@@ -29,6 +31,12 @@ section {
 
 h2 {
 	margin:0;
+}
+
+h1 {
+	margin:0;
+	color:blue;
+	font-family: verdana;
 }
 
 .cover {
@@ -49,4 +57,9 @@ a:link, a:visited, a:active, a:hover {
 	background-color:yellow;
 	text-align:center;
 	padding:5px;
+}
+
+.right {
+	text-align: right;
+	float: right;
 }
